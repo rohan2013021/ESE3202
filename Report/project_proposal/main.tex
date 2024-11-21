@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{ESE 3202}
+\author{Mahmud Abdul Aziz Rohan}
+\date{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+  \maketitle
+  \newpage
+    
+  \section*{Title}
+  Smart Water Level Mangement System Using ESP32 Microcontroller
+
+  \section*{Objectives}
+  % Controlling water level is a very crucial process in any industry. Power
+  % plants require to maintain water level in boiler, feed water tank.
+  % Residential houses also require water level controlling to fill there overhead
+  % and underground tanks. This is a regular work. To make the process easier, a
+  % microcontroller based device can automate this process. To achieve this, this
+  % project is targetting to...
+  Controlling water levels is a critical process in various industries. For 
+  instance, power plants must maintain precise water levels in boilers and 
+  feedwater tanks to ensure efficient and safe operations. Similarly,
+  residential houses require water level control to fill overhead and
+  underground tanks effectively. This task is a regular and essential activity.
+  To simplify and automate this process, a microcontroller-based device can be 
+  employed. The goal of this project is to
+
+  \begin{enumerate}
+    \item design an efficient microcontroller-based (ESP32) control device
+    \item automate the water level control process
+    \item reduce manual intervention in water level management and thus reducing
+      waste of water due to human error thus reducing electicity cost
+  \end{enumerate}
+
+    
+\end{document}
