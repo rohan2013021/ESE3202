@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Python program to print all }
+\PYG{c+c1}{\PYGZsh{} prime number in an interval }
+
+\PYG{n}{start} \PYG{o}{=} \PYG{l+m+mi}{11}
+\PYG{n}{end} \PYG{o}{=} \PYG{l+m+mi}{25}
+
+\PYG{k}{for} \PYG{n}{val} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{start}\PYG{p}{,} \PYG{n}{end} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{):} 
+	
+\PYG{c+c1}{\PYGZsh{} If num is divisible by any number }
+\PYG{c+c1}{\PYGZsh{} between 2 and val, it is not prime }
+\PYG{k}{if} \PYG{n}{val} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{1}\PYG{p}{:} 
+	\PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{val}\PYG{p}{):} 
+		\PYG{k}{if} \PYG{p}{(}\PYG{n}{val} \PYG{o}{\PYGZpc{}} \PYG{n}{n}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:} 
+			\PYG{k}{break}
+	\PYG{k}{else}\PYG{p}{:} 
+		\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{val}\PYG{p}{)} 
+\end{Verbatim}

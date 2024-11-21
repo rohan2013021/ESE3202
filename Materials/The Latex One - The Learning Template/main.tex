@@ -1,0 +1,492 @@
+\documentclass[10pt]{article}
+
+
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+\usepackage[a4paper, left=1in, top=1in, right=1in, bottom=1in]{geometry}   % Setup page geometry
+\usepackage{fancyhdr}                                                      % Set up page numbering
+\fancypagestyle{plain}{\fancyhf{} \renewcommand{\headrulewidth}{0pt} \renewcommand{\footrulewidth}{0pt} \fancyfoot[R]{Page | \thepage}} \pagestyle{plain}
+\usepackage{fontspec} \setmainfont{Times New Roman}                        % set main font of the document
+
+
+\usepackage{lipsum}   \setlength{\parindent}{0pt}                               % For paragraph generator and spacer
+\tolerance=1 \emergencystretch=\maxdimen \hyphenpenalty=10000 \hbadness=10000   % for justify without hypen 
+
+\usepackage{enumitem}                                                      % For listing anything
+\usepackage{tikz, tcolorbox}                                               % For box paragraph
+\usepackage{mdframed}                                                      % Similar to tcolorbox with page breaking advantage
+\usepackage{minted} \usemintedstyle{emacs}                                 % For code insert as list -> 
+
+\usepackage{amsmath, eulervm}                                              % For mathematical equations with Euler math font
+\usepackage{mhchem}                                                        % For chemical equations
+
+\usepackage{graphicx}                                                      % Required for inserting images & single pdf page
+\usepackage{subcaption}                                                    % Required for subfigures
+\usepackage{float}                                                         % Required for figure and table floating as it is
+\usepackage{svg}                                                           % Required for inserting svg files
+
+\usepackage[numbers]{natbib}                                               % Use natbib package with IEEE style, use \citep{} for citation
+\bibliographystyle{IEEEtran}                                               % Use IEEEtran bibliography style
+\usepackage{url, hyperref} \hypersetup{colorlinks = true,  linkcolor = cyan,   citecolor = cyan, urlcolor=blue}       % For all hyperlinks & Color for the links
+\usepackage{cleveref} \renewcommand{\figurename}{Fig.}  \renewcommand{\tablename}{Table} %--------------------------- % Clever referencing with \autoref{}
+                      \def\figureautorefname{Fig.}      \def\tableautorefname{Table}    \def\equationautorefname{Eq.} % Clever referencing with \autoref{}
+
+
+
+
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+\title{Latex Tutorial}
+\author{Mostafizur Rahaman}
+\date{\today}
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section{Introduction}
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+The budget justification meticulously outlines the allocation of funds essential for the successful execution of the project. It includes provisions for acquiring crucial materials like a 1TB hard disk and 16GB RAM, which are pivotal for efficient data storage and software performance during computational tasks. Additionally, budgetary considerations encompass the procurement of individual REFPROP licenses, $x^2$ indispensable for accessing specialized software required for conducting thermodynamic simulations central to the research objectives. Labor costs for transportation and assembly activities are factored in to ensure seamless project operations and the effective utilization of \cite{mostakim2021harnessing} resources \citep{yamamoto2001design}. \\
+
+Furthermore, funds are allocated for research publication fees, facilitating the dissemination of research findings through publications in referred journals or presentations at international conferences. Another significant allocation is made towards thesis typing, printing, and binding expenses, which are vital for the production of final project documentation adhering to academic standards. Lastly, a miscellaneous fund is included to address any unforeseen expenses or additional project needs that may arise during the course of the research. This comprehensive budget structure is designed to cover all essential project expenses, thereby ensuring the smooth implementation of research activities and the attainment of research objectives \citep{auld2013organic}.
+
+The budget justification meticulously outlines the allocation of funds essential for the successful execution of the project. It includes provisions for acquiring crucial materials like a 1TB hard disk and 16GB RAM, which are pivotal for efficient data storage and software performance during computational tasks. Additionally, budgetary considerations encompass the procurement of individual REFPROP licenses, indispensable for accessing specialized software required for conducting thermodynamic simulations central to the research objectives. Labor costs for transportation and assembly activities are factored in to ensure seamless project operations and the effective utilization of resources \citep{yamamoto2001design}. \\
+
+Furthermore, funds are allocated for research publication fees, facilitating the dissemination of research findings through publications in referred journals or presentations at international conferences. Another significant allocation is made towards thesis typing, printing, and binding expenses, which are vital for the production of final project documentation adhering to academic standards. Lastly, a miscellaneous fund is included to address any unforeseen expenses or additional project needs that may arise during the course of the research. This comprehensive budget structure is designed to cover all essential project expenses, thereby ensuring the smooth implementation of research activities and the attainment of research objectives \citep{auld2013organic}.
+
+The budget justification meticulously outlines the allocation of funds essential for the successful execution of the project. It includes provisions for acquiring crucial materials like a 1TB hard disk and 16GB RAM, which are pivotal for efficient data storage and software performance during computational tasks. Additionally, budgetary considerations encompass the procurement of individual REFPROP licenses, indispensable for accessing specialized software required for conducting thermodynamic simulations central to the research objectives. Labor costs for transportation and assembly activities are factored in to ensure seamless project operations and the effective utilization of resources \citep{yamamoto2001design}. \\
+
+Furthermore, funds are allocated for research publication fees, facilitating the dissemination of research findings through publications in referred journals or presentations at international conferences. Another significant allocation is made towards thesis typing, printing, and binding expenses, which are vital for the production of final project documentation adhering to academic standards. Lastly, a miscellaneous fund is included to address any unforeseen expenses or additional project needs that may arise during the course of the research. This comprehensive budget structure is designed to cover all essential project expenses, thereby ensuring the smooth implementation of research activities and the attainment of research objectives \citep{auld2013organic}.
+The budget justification meticulously outlines the allocation of funds essential for the successful execution of the project. It includes provisions for acquiring crucial materials like a 1TB hard disk and 16GB RAM, which are pivotal for efficient data storage and software performance during computational tasks. Additionally, budgetary considerations encompass the procurement of individual REFPROP licenses, indispensable for accessing specialized software required for conducting thermodynamic simulations central to the research objectives. Labor costs for transportation and assembly activities are factored in to ensure seamless project operations and the effective utilization of resources \citep{yamamoto2001design}. \\
+
+\begin{tcolorbox}[title = Definition of Python code, skin=standard jigsaw, sharp corners, colback=blue!10, colframe=blue!50, boxrule=0pt]
+Furthermore, funds are allocated for research publication fees, facilitating the dissemination of research findings through publications in referred journals or presentations at international conferences. Another significant allocation is made towards thesis typing, printing, and binding expenses, which are vital for the production of final project documentation adhering to academic standards. Lastly, a miscellaneous fund is included to address any unforeseen expenses or additional project needs that may arise during the course of the research. This comprehensive budget structure is designed to cover all essential project expenses, thereby ensuring the smooth implementation of research activities and the attainment of research objectives \citep{auld2013organic}.
+\end{tcolorbox}
+
+\begin{enumerate}[label=\textbf{\Alph*.}]
+    \item Thing One
+        \begin{enumerate}[label=\Roman*.]
+            \item Sub One
+            \item Sub Two
+            \item Sub Three
+        \end{enumerate}
+    \item Thing Two
+    \item Thing Three
+\end{enumerate}
+
+
+Furthermore, \autoref{fig:enter-label} funds are allocated for research publication fees, facilitating the dissemination of research findings through publications in referred journals or presentations at international conferences. Another significant allocation is made towards thesis typing, printing, and binding expenses, which are vital for the production of final project documentation adhering to academic standards. Lastly, a miscellaneous fund is included to address any unforeseen expenses or additional project needs that may arise during the course of the research. This comprehensive budget structure is designed to cover all essential project expenses, thereby ensuring the smooth implementation of research activities and the attainment of research objectives \cite{stiawan2020cicids}. \\
+
+\begin{tcolorbox}[title = Definition of Physics, skin=standard jigsaw, sharp corners, colback=blue!10, colframe=blue!50, boxrule=0pt]
+    Physics is the branch of science that deals with the matter and energy and their interaction. Physics is the branch of science that deals with the matter and energy and their interaction. Physics is the branch of science that deals with the matter and energy and their interaction \cite{arpagaus2018high}.
+\end{tcolorbox}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section{Methodology}
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+\subsection{Methodology I}
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{figure}[H]
+    \centering
+    \includesvg[width=.4\textwidth]{Logo_KUET.svg}
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{kuet-logo-F2194AF03E-seeklogo.com.png}
+        \caption{Subfigure A}
+        \label{fig:sub1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{kuet-logo-F2194AF03E-seeklogo.com.png}
+        \caption{Subfigure B}
+        \label{fig:sub2}
+    \end{subfigure}
+    \caption{Main figure with two subfigures}
+    \label{fig:main}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+\subsection{Methodology II}
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+The quadratic formula is given by \autoref{eq:quadric}:
+\begin{equation}
+    \label{eq:quadric}
+    x = \frac{{-b \pm \sqrt{{b^2 - 4ac}}}}{{2a}}
+\end{equation}
+where $a$, $b$, and $c$ are coefficients \autoref{fig:sub1} of the quadratic equation $ax^2 + bx + c = 0$. \\
+
+
+
+
+
+
+
+
+The combustion of methane (\ce{CH4}) can be represented by the following chemical equation \url{www.google.com}:
+\begin{equation}
+    \ce{CH4 + 2O2 -> CO2 + 2H2O}
+\end{equation}
+
+
+
+
+
+
+\begin{tcolorbox}[title = Definition of Python code, skin=standard jigsaw, sharp corners, colback=blue!10, colframe=blue!50, boxrule=0pt]
+\begin{minted}[breaklines, breakanywhere]{MATLAB}
+import numpy as np
+
+def incmatrix(genl1, genl2):
+    m = len(genl1)
+    n = len(genl2)
+    M = None #to become the incidence matrix
+    VT = np.zeros((n*m,1), int)  #dummy variable
+
+    #compute the bitwise xor matrix
+    M1 = bitxormatrix(genl1)
+    M2 = np.triu(bitxormatrix(genl2),1)  
+
+    for i in range(m-1):
+        for j in range(i+1, m):
+            [r,c] = np.where(M2 == M1[i,j])
+            for k in range(len(r)):
+                VT[(i)*n + r[k]] = 1;
+                VT[(i)*n + c[k]] = 1;
+                VT[(j)*n + r[k]] = 1;
+                VT[(j)*n + c[k]] = 1;
+
+                if M is None:
+                    M = np.copy(VT)
+                else:
+                    M = np.concatenate((M, VT), 1)
+
+                VT = np.zeros((n*m,1), int)
+    
+    return M
+\end{minted}
+\end{tcolorbox}
+
+
+
+
+
+
+
+\begin{tcolorbox}[title = Definition of Python code, skin=standard jigsaw, sharp corners, colback=blue!10, colframe=blue!50, boxrule=0pt]
+\inputminted{python}{sample2.py}
+\end{tcolorbox}
+
+
+
+
+
+\begin{tcolorbox}[title = Definition of MATLAB code, skin=standard jigsaw, sharp corners, colback=blue!10, colframe=blue!50, boxrule=0pt]
+\inputminted{matlab}{polyfit_graph.m}
+\end{tcolorbox}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section{Result and Discussion}
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Table is \autoref{tab:my_label} shows that \autoref{tab:my_label}
+
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|} \hline
+        A & A & A & A \\ \hline
+        A & A & A & A \\ \hline
+        A & A & A & A \\ \hline
+        A & A & A & A \\ \hline
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section{Colclusion}
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+\bibliography{ref}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
+\end{document}
+% --------------------------------------------------------------------------------------------------------------------------------------------------------------
