@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1732181417.57431 "/home/rihla/ESE/3-2/ESE3202/Report/project_proposal/main.tex" "main.pdf" "main" 1732181419.69724 0
-  "/home/rihla/ESE/3-2/ESE3202/Report/project_proposal/main.tex" 1732181417.23682 4274 2290c8205a1e7d36635f0c1af70a4d20 ""
+["pdflatex"] 1732182194.76451 "/home/rihla/ESE/3-2/ESE3202/Report/project_proposal/main.tex" "main.pdf" "main" 1732182196.49928 0
+  "/home/rihla/ESE/3-2/ESE3202/Report/project_proposal/main.tex" 1732182190.38742 4328 7d0a2a2832df9957c349d84a1cbd96a0 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1727349926 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1727349926 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1727349926 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -197,8 +197,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1731089640.23895 5312047 b07fcd2a9090df96fc745b92a3db793b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1731089625 7112989 45b5167cb48f3367edca1ee342120522 ""
-  "main.aux" 1732181419.48013 67 1ef9204e575c5392681f20eea05cdd6d "pdflatex"
-  "main.tex" 1732181417.23682 4274 2290c8205a1e7d36635f0c1af70a4d20 ""
+  "main.aux" 1732182196.33402 67 d1f1d04f1f825549314e4f02ae5806bb "pdflatex"
+  "main.tex" 1732182190.38742 4328 7d0a2a2832df9957c349d84a1cbd96a0 ""
   (generated)
   "main.aux"
   "main.log"
