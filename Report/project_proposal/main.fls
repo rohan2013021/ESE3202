@@ -1,7 +1,7 @@
 PWD /home/rihla/ESE/3-2/ESE3202/Report/project_proposal
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/rihla/ESE/3-2/ESE3202/Report/project_proposal/main.tex
+INPUT main.tex
 OUTPUT main.log
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
