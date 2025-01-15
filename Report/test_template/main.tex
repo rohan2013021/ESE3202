@@ -1,70 +1,215 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass{article}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{report}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{geometry}
-\usepackage{graphicx}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{empheq}
-\usepackage{mdframed}
-\usepackage{booktabs}
-\usepackage{lipsum}
-\usepackage{graphicx}
-\usepackage{color}
-\usepackage{psfrag}
-\usepackage{pgfplots}
-\usepackage{bm}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Required packages
+\usepackage[top=30mm,bottom=25mm,left=30mm,right=25mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{setspace}        % For line spacing
+\usepackage{graphicx}        % For images
+\usepackage{amsmath}         % For mathematical equations
+\usepackage[capitalise]{cleveref} % For smart references
+\usepackage{caption}         % For figure and table captions
+\usepackage{tocloft}         % For customizing table of contents
+\usepackage{fancyhdr}        % For header and footer
+\usepackage{titlesec}        % For formatting titles
+\usepackage{enumitem}        % For list customization
 
-% Other Settings
+% Define font sizes
+\newcommand{\normaltextsize}{\fontsize{12}{14.4}\selectfont}
+\newcommand{\largetitlesize}{\fontsize{14}{16.8}\selectfont}
+\newcommand{\chaptertitlesize}{\fontsize{14}{16.8}\selectfont}
+\newcommand{\sectiontitlesize}{\fontsize{12}{14.4}\selectfont}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\geometry{a4paper}
+% Configure different chapter formats
+\newcommand{\mainchapterformat}{
+    \titleformat{\chapter}[display]  % Display style for separate lines
+        {\normalfont\normaltextsize\bfseries\centering}
+        {\chaptertitlename\ \thechapter}
+        {2\baselineskip}  % Two blank lines between number and title
+        {}
+        [\vspace{2\baselineskip}]  % Two blank lines after title
+    \titlespacing*{\chapter}{0pt}{-20pt}{40pt}
+}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
-\definecolor{ocre}{RGB}{243,102,25}
-\definecolor{mygray}{RGB}{243,243,244}
-\definecolor{deepGreen}{RGB}{26,111,0}
-\definecolor{shallowGreen}{RGB}{235,255,255}
-\definecolor{deepBlue}{RGB}{61,124,222}
-\definecolor{shallowBlue}{RGB}{235,249,255}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\prelimchapterformat}{
+    \titleformat{\chapter}
+        {\normalfont\largetitlesize\bfseries\centering}
+        {}
+        {0pt}
+        {}
+    \titlespacing*{\chapter}{0pt}{-20pt}{40pt}
+}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\nomenclatureformat}{
+    \titleformat{\chapter}
+        {\normalfont\normaltextsize\bfseries\raggedright}
+        {}
+        {0pt}
+        {}
+    \titlespacing*{\chapter}{0pt}{-20pt}{40pt}
+}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
-\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
-\theoremstyle{mytheoremstyle}
-\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
-\theoremstyle{mytheoremstyle}
-\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
-\theoremstyle{myproblemstyle}
-\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configure section formatting
+\titleformat{\section}
+    {\normalfont\sectiontitlesize\bfseries}
+    {\thesection}
+    {1em}
+    {}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepgfplotslibrary{colorbrewer}
-\pgfplotsset{width=8cm,compat=1.9}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This removes the automatic title from list of figures
+\renewcommand{\listfigurename}{}
 
+% For removing the vertical space that comes with the empty title
+\makeatletter
+\renewcommand{\listoffigures}{%
+    \begingroup
+    \@starttoc{lof}%
+    \endgroup
+}
+\makeatother
 
-\title{ESE 3202}
-\author{Mahmud Abdul Aziz Rohan \\ Roll: 2013021 \\ Department of Energy Science and Engineering}
-\date{November 2024}
+\renewcommand{\listtablename}{}
 
+% For removing the vertical space that comes with the empty title
+\makeatletter
+\renewcommand{\listoftables}{%
+    \begingroup
+    \@starttoc{lof}%
+    \endgroup
+}
+\makeatother
+
+% Configure table of contents font
+\renewcommand{\cfttoctitlefont}{\hfil\chaptertitlesize\bfseries}
+\renewcommand{\cftchapfont}{\normalfont\bfseries}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsubsecfont}{\normalfont}
+
+% Page numbering style
+\pagestyle{plain}
+\pagenumbering{roman}
+
+% Document begin
 \begin{document}
 
-\maketitle
+% Title page
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+{\fontsize{14}{16}\selectfont\bfseries\begin{spacing}{1.5}TITLE OF THE PROJECT\end{spacing}}
 
-\section{Project Ideas}
-\begin{enumerate}
-    \item Automated water level monitoring and control system for residential water tanks using the HC-SR04 ultrasonic sensor.
-\end{enumerate}
+\vspace{3\baselineskip}
+{\fontsize{12}{14}\selectfont by}
+
+\vspace{3\baselineskip}
+{\fontsize{12}{14}\selectfont\bfseries Mahmud Abdul Aziz Rohan (ROLL NO. 2013021)}
+
+\vspace{4\baselineskip}
+{\fontsize{12}{14}\selectfont\begin{spacing}{1.5}A Report submitted in partial fulfillment of the requirements for the degree of\\
+B.Sc. Engineering in Energy Science and Engineering\end{spacing}}
+
+\vspace{3\baselineskip}
+\includegraphics[width=1.27in]{kuet-logo.png}
+
+\vspace{3\baselineskip}
+{\fontsize{12}{14}\selectfont\begin{spacing}{1.5}
+Khulna University of Engineering \& Technology\\
+Khulna-9203, Bangladesh
+\end{spacing}}
+
+\vfill
+{\fontsize{12}{14}\selectfont January 2025}
+\end{center}
+\end{titlepage}
+
+% Start with preliminary format
+\prelimchapterformat
+
+% Declaration page
+\chapter*{Declaration}
+\addcontentsline{toc}{chapter}{Declaration}
+\begin{spacing}{1.5}
+\noindent This is to certify that the project work entitled ``\textit{(Project title)}'' has been carried out by \textit{Mahmud Abdul Aziz Rohan, Roll No. 2013021} in the Department of Energy Science and Engineering, Khulna University of Engineering \& Technology, Khulna - 9203, Bangladesh. The above project work or any part of this work has not been submitted anywhere for the award of any degree or diploma.
+
+\vspace{3\baselineskip}
+\noindent\begin{tabular}{@{}p{0.3\textwidth}@{}p{0.4\textwidth}@{}p{0.3\textwidth}@{}}
+\rule{0.3\textwidth}{0.4pt} & & \rule{0.3\textwidth}{0.4pt}\\
+Mostafizur Rahaman & & Mahmud Abdul Aziz Rohan
+\end{tabular}
+\end{spacing}
+
+% Approval page
+\chapter*{Approval}
+\addcontentsline{toc}{chapter}{Approval}
+\begin{spacing}{1.5}
+\noindent This is to certify that the project work submitted by \textit{Mahmud
+Abdul Aziz Rohan, Roll No. 2013021} entitled ``\textit{(title of the Report)}''
+has been approved by the board of examiners for the partial fulfillment of the
+requirements for the degree of B.Sc. in the Department of Energy Science and
+Engineering, Khulna University of Engineering \& Technology, Khulna - 9203, Bangladesh in January 2025.
+
+\vspace{3\baselineskip}
+{\centering\fontsize{14}{16}\selectfont\textbf{BOARD OF EXAMINERS}\par}
+
+\vspace{3\baselineskip}
+\noindent\begin{tabular}{@{}p{0.1\textwidth}@{}p{0.9\textwidth}@{}}
+1. & \rule{0.8\textwidth}{0.4pt}\\
+& Mostafizur Rahaman\\
+& Lecturer\\
+& Khulna University of Engineering \& Technology\\
+& Khulna-9203, Bangladesh\\[2\baselineskip]
+2. & \rule{0.8\textwidth}{0.4pt}\\
+& Name\\
+& Designation\\
+& Khulna University of Engineering \& Technology\\
+& Khulna-9203, Bangladesh
+\end{tabular}
+\end{spacing}
+
+% Acknowledgement
+\chapter*{Acknowledgement}
+\addcontentsline{toc}{chapter}{Acknowledgement}
+\begin{spacing}{1.5}
+\noindent This is to certify that the project work entitled ``\textit{(Project title)}'' has been carried out by \textit{Mahmud Abdul Aziz Rohan, Roll No. 2013021} in the Department of Energy Science and Engineering, Khulna University of Engineering \& Technology, Khulna - 9203, Bangladesh. The above project work or any part of this work has not been submitted anywhere for the award of any degree or diploma.
+\end{spacing}
+
+% Front matter
+\clearpage
+\tableofcontents
+
+\clearpage
+\chapter*{List of Figures}  % This gives you control over the title
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+\clearpage
+\chapter*{List of Tables}  % This gives you control over the title
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoffigures
+\listoftables
+
+% Nomenclature with special format
+\nomenclatureformat
+\chapter*{Nomenclature}
+\addcontentsline{toc}{chapter}{Nomenclature}
+\textit{T}
+
+% Switch to main chapter format for the rest of the document
+\mainchapterformat
+
+% Main content begins
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{Introduction}
+\section{General}
+% Your content here
+
+% References
+% \begin{thebibliography}{99}
+% \addcontentsline{toc}{chapter}{References}
+% % Your references here
+% \end{thebibliography}
+
 \end{document}
-
