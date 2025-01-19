@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1736944198.35414 "main.tex" "main.pdf" "main" 1736944199.75681 0
+["lualatex"] 1737010840.99885 "main.tex" "main.pdf" "main" 1737010842.54921 0
   "/home/rihla/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-bold.luc" 1736906571.62728 128286 d012e848f630e37591e3db2d7055274f ""
   "/home/rihla/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc" 1736906571.39061 127657 6bad1bc2543754cae9ba9c6746b71bd5 ""
   "/home/rihla/.texlive/texmf-var/luatex-cache/generic/fonts/otl/times.luc" 1736906572.03061 693016 a91d1a5b3136d54901a0f3809b7f408a ""
@@ -108,11 +108,11 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1736304698.6108 5318467 8236939515598d005dfbcc2e1a40f206 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1736304619 12260760 bad09414c9e1358c672533b9bc7eb674 ""
   "kuet-logo.png" 1736882488.49128 392231 a282caf78f6abd5422b5a67966ca5b78 ""
-  "main.aux" 1736944199.61793 824 81a06c113984008887fb1c58253a8d7e "lualatex"
-  "main.lof" 1736944199.61793 20 f06013b926d20d994f242e1f23baff30 "lualatex"
-  "main.lot" 1736944199.61793 20 f06013b926d20d994f242e1f23baff30 "lualatex"
-  "main.tex" 1736944192.95467 6840 e48919d2e548ae1fae83b0d0c23642ad ""
-  "main.toc" 1736944199.61793 388 abcd4d6150ff0a94bcfcfe73524d344c "lualatex"
+  "main.aux" 1737010842.39781 2045 91c4930ea64eabf04e257122dd31f96c "lualatex"
+  "main.lof" 1737010842.39781 100 4353d675f6b597e3aa3d5147c8369dec "lualatex"
+  "main.lot" 1737010842.39781 100 4353d675f6b597e3aa3d5147c8369dec "lualatex"
+  "main.tex" 1737010838.61783 7169 033da14ef4d86ef566e74fdbcb5cb45d ""
+  "main.toc" 1737010842.39781 935 6113f7f9492b0d18d14669be49cf2805 "lualatex"
   (generated)
   "main.aux"
   "main.lof"

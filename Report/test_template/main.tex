@@ -56,7 +56,6 @@
     {1em}
     {}
 
-% This removes the automatic title from list of figures
 \renewcommand{\listfigurename}{}
 
 % For removing the vertical space that comes with the empty title
@@ -74,7 +73,7 @@
 \makeatletter
 \renewcommand{\listoftables}{%
     \begingroup
-    \@starttoc{lof}%
+    \@starttoc{lot}%
     \endgroup
 }
 \makeatother
@@ -185,8 +184,12 @@ Engineering, Khulna University of Engineering \& Technology, Khulna - 9203, Bang
 \clearpage
 \chapter*{List of Tables}  % This gives you control over the title
 \addcontentsline{toc}{chapter}{List of Tables}
-\listoffigures
 \listoftables
+
+\clearpage
+\chapter*{List of Illustrations}
+\addcontentsline{toc}{chapter}{List of Illustrations}
+%\listofillustrations
 
 % Nomenclature with special format
 \nomenclatureformat
@@ -206,6 +209,22 @@ Engineering, Khulna University of Engineering \& Technology, Khulna - 9203, Bang
 \section{General}
 % Your content here
 
+\chapter{Literature Review}
+\section{General}
+
+\chapter{Procedure}
+\section{General}
+% Your content here
+
+\chapter{Results and Discussion}
+\section{General}
+% Your content here
+
+\chapter{Conclusions and Recommendations}
+\section{General}
+% Your content here
+
+% Your content here
 % References
 % \begin{thebibliography}{99}
 % \addcontentsline{toc}{chapter}{References}

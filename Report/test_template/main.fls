@@ -114,8 +114,6 @@ INPUT ./main.toc
 OUTPUT main.toc
 INPUT ./main.lof
 OUTPUT main.lof
-INPUT ./main.lof
-OUTPUT main.lof
 INPUT ./main.lot
 OUTPUT main.lot
 INPUT ./main.aux
